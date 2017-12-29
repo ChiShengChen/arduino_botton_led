@@ -1,7 +1,7 @@
 #include "FastLED.h"
 
 // How many leds in your strip?
-#define NUM_LEDS 8
+#define NUM_LEDS 10
 
 // For led chips like Neopixels, which have a data line, ground, and power, you just
 // need to define DATA_PIN.  For led chipsets that are SPI based (four wires - data, clock,
@@ -44,10 +44,10 @@ void setup() {
 
 void loop() { 
   // Turn the LED on, then pause
-  for(int blightness = 0; blightness < 255; ++blightness){
+  //for(int blightness = 0; blightness < 255; ++blightness){
     for(int i = 0; i < NUM_LEDS; ++i){
-      leds[i].setHSV( 228, 0, blightness );
+      leds[i].setHSV( 0, 0, 100 );
     }
     FastLED.show();
-  }
+  //}
 }
