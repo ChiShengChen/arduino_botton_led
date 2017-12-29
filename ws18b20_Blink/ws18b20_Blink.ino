@@ -44,10 +44,12 @@ void setup() {
 
 void loop() { 
   // Turn the LED on, then pause
-  //for(int blightness = 0; blightness < 255; ++blightness){
+  for(int blightness = 0; blightness < 255; --blightness){
     for(int i = 0; i < NUM_LEDS; ++i){
-      leds[i].setHSV( 0, 0, 100 );
+      leds[i].setHSV( 0, 0, blightness );
     }
     FastLED.show();
-  //}
+    
+  }
+
 }
